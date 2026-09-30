@@ -1,4 +1,4 @@
-🎲 Criador de Ficha de RPG - Laboratório de CSS Externo e UI/UX
+# 🎲 Criador de Ficha de RPG - Laboratório de CSS externo e UI/UX
 
 Este repositório contém o código-fonte de uma aplicação web conceitual focada em design, arquitetura de software front-end e estruturação de interfaces. O projeto foi desenvolvido com objetivos acadêmicos, servindo como uma **Prova de Conceito (PoC)** e ambiente controlado para o aprendizado prático de organização de estilos via **CSS Externo**, modularização de arquivos e boas práticas de desenvolvimento web.
 
