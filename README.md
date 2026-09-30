@@ -47,7 +47,7 @@ A organização do repositório foi planejada para simular o ecossistema de um s
 
 O projeto está publicado e pode ser visualizado em tempo real pelo link abaixo:
 
-🔗 **[Acesse o Projeto Online]([https://vercel.app](https://css-externo-webdesign.vercel.app/))**
+🔗 **Acesse o projeto online:** [Clique aqui para visualizar o site](https://css-externo-webdesign.vercel.app/)
 
 ---
 
