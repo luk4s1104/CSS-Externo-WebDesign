@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+  background-image: url('../Img_folder/rpg-de-mesa.png');
+    /* Imagem de fundo com um degradê escuro por cima */
+    background-image: url('../Img_folder/rpg-de-mesa.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('../Img_folder/rpg-de-mesa.png');
+    background-size: cover;             
+    background-position: center;        
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantém o fundo estático enquanto o texto rola por cima */
+
+    font-family: 'Inter', sans-serif; 
+    color: #f3f4f6;
+
+    display: flex;
+    flex-direction: column; /* Organiza os blocos um embaixo do outro */
+    align-items: center;    /* Centraliza todos os blocos horizontalmente na tela */
+    min-height: 100vh;      
+    margin: 0;
+     padding: 120px 0 0 0; /* 120px no topo impede que o cabeçalho cubra o texto */
+    box-sizing: border-box;         /* Cria um espaçamento de segurança nas bordas para o conteúdo não colar na tela */
+}
+
+/* Configuração Principal do Cabeçalho */
+.site-header {
+    display: flex;
+    justify-content: space-between; /* Mantém espaço para novos elementos no futuro */
+    align-items: center;            /* Alinha a imagem e o texto no centro vertical */
+    padding: 20px 40px;             /* Espaçamento interno nas bordas */
+    background: rgba(0, 0, 0, 0.4); /* Fundo escuro transparente */
+    backdrop-filter: blur(5px);     /* Efeito de vidro fosco no fundo */
+    position: absolute;             /* Fixa o cabeçalho sobre a imagem de fundo do site */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;         /* Evita que o padding aumente o tamanho total do topo */
+    z-index: 10;                    /* Garante que fique por cima da seção central */
+}
+
+/* Alinhamento do Bloco do Logo (Imagem + Texto) */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;                      /* Espaçamento perfeito entre o dado e o texto */
+}
+
+/* Container da Imagem */
+.logo-img {
+    display: flex;
+    align-items: center;
+}
+
+/* Controle do Tamanho e Cor da Imagem do D20 */
+.logo-img img {
+    height: 40px;                   /* Altura ideal para o cabeçalho */
+    width: auto;                    /* Mantém a proporção correta para não distorcer */
+    filter: invert(1);              /* Inverte a cor preta do dado para branco, destacando no fundo escuro */
+}
+
+/* Estilização do Texto do Logo */
+.logo-texto {
+    color: #ffffff;                 /* Cor branca pura */
+    font-size: 24px;
+    font-weight: bold;              /* Deixa a fonte em negrito */
+    font-family: sans-serif;        /* Fonte limpa */
+    letter-spacing: 0.5px;          /* Pequeno espaçamento entre as letras */
+}
+
+.conteudo-principal {
+    max-width: 750px;
+    margin: 40px auto 60px auto; /* 120px de margem inferior empurra a próxima seção para baixo */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.conteudo-principal h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.conteudo-principal p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+.acoes-principais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botao-quem-somos {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.botao-quem-somos:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.botao-saiba-mais{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.botao-saiba-mais:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.secao-explicativa {
+    max-width: 750px;
+    margin: 0 auto 40px auto; /* Reduzido a margem inferior para acumular as seções */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.secao-explicativa h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 10px;
+}
+
+.bloco-recurso {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.bloco-recurso h3 {
+    font-size: 18px;
+    color: #f3f4f6;
+    margin-bottom: 8px;
+}
+
+.bloco-recurso p {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;      /* Ativa o Flexbox para alinhar os botões um ao lado do outro */
+    flex-wrap: wrap;    /* Permite que os botões pulem de linha automaticamente se não couberem na tela */
+    gap: 20px;          /* Cria uma distância padrão de 20px fixa entre cada botão */
+    justify-content: center;
+}
+
+.btn {                     /*aplica mudanças a todos os botoes*/
+    display: inline-block; /* Permite ajustar altura/largura e alinhar ao lado de outros botões */
+    padding: 14px 28px;    /* Define o espaçamento interno (14px cima/baixo, 28px lados) para dar volume */
+    font-size: 1rem;       /* Define o tamanho do texto do botão */
+    font-weight: 600;      /* Deixa a fonte em negrito */
+    text-decoration: none; 
+    border-radius: 8px;     /* Deixa os cantos do botão arredondados e modernos */
+    transition: all 0.3s ease;   /* Faz com que qualquer mudança (como o :hover) aconteça de forma suave e gradual */
+    cursor: pointer;            /* Transforma a seta do mouse naquela "mãozinha" de clique quando passa por cima */
+}
+
+.btn-primary {
+    background-color: #b91c1c; 
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4);
+}
+.btn-primary:hover {
+    background-color: #dc2626; 
+    transform: translateY(-3px);  /* Move o botão 3 pixels para cima */
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Adiciona uma borda contornando o botão */
+}
+
+.btn-terciary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Adiciona uma borda contornando o botão */
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px); /* Move o botão 3 pixels para cima */
+}
+
+.btn-terciary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translatey(-3px); /* Move o botão 3 pixels para cima */
+}
+
+.sobre-nos{
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto 30px auto; /* Margem inferior reduzida para manter o espaçamento curto */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.sobre-nos h2{
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #374151; /* Linha sutil divisória */
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.sub-bloco-sobre {
+    margin-bottom: 25px;
+}
+
+.sub-bloco-sobre:last-child {
+    margin-bottom: 0;
+}
+
+.sub-bloco-sobre h3 {
+    font-size: 16px;
+    color: #f3f4f6;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.sub-bloco-sobre p {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.lista-integrantes {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.lista-integrantes li {
+    font-size: 14px;
+    color: #9ca3af;
+    background: rgba(255, 255, 255, 0.03); /* Fundo cinza bem sutil para criar um bloco */
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-left: 3px solid #b91c1c; /* Detalhe em vermelho escuro combinando com a identidade do site */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lista-integrantes li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 20px 40px;             
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px);     
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;         
+    z-index: 10;                    
+}
+
+.rodape .texto p {
+    font-size: 14px;
+    color: #9ca3af; 
+    margin: 0;
+}
+
+.links-rodape {
+    display: flex;
+    gap: 20px; /* Cria um espaçamento horizontal idêntico entre cada link */
+}
+
+.links-rodape a {
+    font-size: 14px;
+    color: #f3f4f6; 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+}
+
+.links-rodape a:hover {
+    color: #9ca3af; 
+}
